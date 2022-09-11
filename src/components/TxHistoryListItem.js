@@ -6,12 +6,12 @@ class TxHistoryListItem extends Component {
   render() {
     return (
         <>
-          {this.getCorrectItemComponent(this.props.tx)}
+          {this.getItemBasedOnType(this.props.tx)}
         </>
     );
   }
 
-  getCorrectItemComponent(tx) {
+  getItemBasedOnType(tx) {
     if (tx.type === 'expense') {
       return <TxHistoryListItemExpense tx={tx}/>;
     } else if (tx.type === 'income') {
