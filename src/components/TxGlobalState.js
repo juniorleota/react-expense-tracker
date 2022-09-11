@@ -26,4 +26,8 @@ function calculateTxTotal() {
   return totalAmount;
 }
 
-export {getTxItems, addTx, calculateTxTotal};
+function clearAllTx() {
+  localStorage.removeItem("txList");
+}
+
+export {getTxItems, addTx, calculateTxTotal, clearAllTx};

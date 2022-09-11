@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import TxHistoryListItem from "./TxHistoryListItem";
-import {getTxItems} from "./TxGlobalState"
+import {getTxItems, clearAllTx} from "./TxGlobalState"
 
 class TxHistoryList extends Component {
   constructor(props) {
@@ -18,8 +18,16 @@ class TxHistoryList extends Component {
     return (
         <div className={"flex-column"}>
           {this.txRows()}
+          <button onClick={this.updateTxList}>Clear All</button>
         </div>
     );
+  }
+
+  updateTxList() {
+    this.state = {
+      txList: []
+    }
+    clearAllTx();
   }
 }
 
