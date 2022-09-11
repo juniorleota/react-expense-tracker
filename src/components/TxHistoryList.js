@@ -1,24 +1,12 @@
 import React, {Component} from 'react';
 import TxHistoryListItem from "./TxHistoryListItem";
+import {getTxItems, addTx} from "./TxGlobalState"
 
 class TxHistoryList extends Component {
   constructor(props) {
     super(props);
-    const testItem1 = {
-      id: 1,
-      description: 'Expense Test',
-      amount: 100,
-      type: 'expense'
-    }
-    const testItem2 = {
-      id: 2,
-      description: 'Income Test',
-      amount: 100,
-      type: 'income'
-    }
-
     this.state = {
-      txList: JSON.parse(localStorage.getItem("txList")) || [testItem1, testItem2]
+      txList: getTxItems()
     }
   }
 
