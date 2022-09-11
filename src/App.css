@@ -49,3 +49,11 @@
   justify-content: space-between;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;;
 }
+
+.expense .amount {
+  color: green;
+}
+
+.income .amount {
+  color: darkred;
+}
