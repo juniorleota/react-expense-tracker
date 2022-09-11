@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import TxHistoryListItem from "./TxHistoryListItem";
-import {getTxItems, addTx} from "./TxGlobalState"
+import {getTxItems} from "./TxGlobalState"
 
 class TxHistoryList extends Component {
   constructor(props) {
@@ -15,9 +15,8 @@ class TxHistoryList extends Component {
   }
 
   render() {
-
     return (
-        <div className={"table"}>
+        <div className={"flex-column"}>
           {this.txRows()}
         </div>
     );

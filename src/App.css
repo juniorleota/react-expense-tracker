@@ -35,7 +35,7 @@
   padding-bottom: 15px;
 }
 
-.table {
+.flex-column {
   display: flex;
   flex-flow: column;
 }
@@ -56,4 +56,22 @@
 
 .income .amount {
   color: darkred;
+}
+
+.add-tx label {
+  padding: 10px 0;
+}
+
+.add-tx input, select, button {
+  padding: 10px;
+}
+
+.add-tx .add-tx-btn {
+  margin-top: 10px;
+}
+
+.error-message {
+  padding: 10px;
+  background-color: #ff00002e;
+  box-shadow: rgb(94 63 63 / 14%) 0 8px 24px;
 }
