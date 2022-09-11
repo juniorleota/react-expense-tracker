@@ -8,9 +8,11 @@ function App() {
   return (
       <div className="App">
         <Header value={"Expense Tracker"}/>
-        <Balance/>
-        <TxHistory/>
-        <AddTx/>
+        <div className={"container"}>
+          <Balance/>
+          <TxHistory/>
+          <AddTx/>
+        </div>
       </div>
   );
 }

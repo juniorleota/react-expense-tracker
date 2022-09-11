@@ -1,5 +1,10 @@
 .App {
-  text-align: center;
+  text-align: left;
+  height: 100vh; /* Magic here */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
 }
 
 .App-header {
@@ -15,4 +20,12 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  align-content: center;
+  width: 350px;
 }
