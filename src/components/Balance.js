@@ -1,11 +1,12 @@
 import React, {Component} from 'react';
-import SubHeader from "../common/SubHeader";
+import BalanceAmount from "./BalanceAmount";
 
 class Balance extends Component {
   render() {
     return (
         <div>
-         <SubHeader value={"Balance"} underline={true}/>
+          <h3 className={"balance-header"}>Balance</h3>
+          <BalanceAmount/>
         </div>
     );
   }

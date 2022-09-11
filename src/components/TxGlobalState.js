@@ -12,4 +12,18 @@ function addTx(tx) {
 }
 
 
-export {getTxItems, addTx};
+function calculateTxTotal() {
+  const currentTxItems = getTxItems();
+  let totalAmount = 0;
+  for (const txItem of currentTxItems) {
+    console.log(txItem);
+    if (txItem.type === 'expense') {
+      totalAmount -= txItem.amount;
+    } else if (txItem.type === 'income') {
+      totalAmount += txItem.amount;
+    }
+  }
+  return totalAmount;
+}
+
+export {getTxItems, addTx, calculateTxTotal};

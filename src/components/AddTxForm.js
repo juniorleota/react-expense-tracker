@@ -17,7 +17,7 @@ class AddTxForm extends Component {
         <form className={"flex-column"} onSubmit={this.handleSubmit}>
           {this.getErrorMessage()}
           <AddTxInputElem label={"Description"} type={"text"} name={"description"}/>
-          <AddTxInputElem label={"Amount"} type={"number"} name={"amount"}/>
+          <AddTxInputElem label={"Amount"} type={"currency"} name={"amount"}/>
           <AddTxType/>
           <button className={"add-tx-btn"} type={"submit"}>Add transaction</button>
         </form>
@@ -34,7 +34,7 @@ class AddTxForm extends Component {
   handleSubmit(event) {
     const newTx = {
       description: event.target['description'].value,
-      amount: event.target['amount'].value,
+      amount: parseFloat(event.target['amount'].value),
       type: event.target['type'].value
     };
     if (newTx.description && newTx.amount) {

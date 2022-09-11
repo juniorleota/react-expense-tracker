@@ -75,3 +75,19 @@
   background-color: #ff00002e;
   box-shadow: rgb(94 63 63 / 14%) 0 8px 24px;
 }
+
+.balance-header {
+  margin-bottom: 4px;
+}
+
+.balance-amount {
+  font-size: 30px;
+}
+
+.balance-amount.negative {
+  color: #a40000;
+}
+
+.balance-amount.positive {
+  color: #007900;
+}
