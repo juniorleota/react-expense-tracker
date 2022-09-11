@@ -5,7 +5,7 @@ class TxHistory extends Component {
   render() {
     return (
         <div>
-          <SubHeader value={"History"}/>
+          <SubHeader value={"History"} underline={true}/>
         </div>
     );
   }

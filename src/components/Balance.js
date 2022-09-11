@@ -5,7 +5,7 @@ class Balance extends Component {
   render() {
     return (
         <div>
-         <SubHeader value={"Balance"}/>
+         <SubHeader value={"Balance"} underline={true}/>
         </div>
     );
   }

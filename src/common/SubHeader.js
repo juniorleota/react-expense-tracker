@@ -6,8 +6,12 @@ class SubHeader extends Component {
   }
 
   render() {
+    let classNames = "subheader";
+    if (this.props.underline) {
+      classNames += " underlined"
+    }
     return (
-        <h3>
+        <h3 className={classNames}>
           {this.props.value}
         </h3>
     );
