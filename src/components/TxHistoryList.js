@@ -5,11 +5,13 @@ class TxHistoryList extends Component {
   constructor(props) {
     super(props);
     const testItem1 = {
+      id: 1,
       description: 'Expense Test',
       amount: 100,
       type: 'expense'
     }
     const testItem2 = {
+      id: 2,
       description: 'Income Test',
       amount: 100,
       type: 'income'
@@ -21,7 +23,7 @@ class TxHistoryList extends Component {
   }
 
   txRows() {
-    return this.state.txList.map((tx) => <TxHistoryListItem tx={tx}/>);
+    return this.state.txList.map((tx) => <TxHistoryListItem tx={tx} key={tx.id}/>);
   }
 
   render() {
